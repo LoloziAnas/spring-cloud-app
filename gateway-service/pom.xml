@@ -11,8 +11,8 @@
     <groupId>com.lzitech</groupId>
     <artifactId>geteway-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>geteway-service</name>
-    <description>geteway-service</description>
+    <name>gateway-service</name>
+    <description>gateway-service</description>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
