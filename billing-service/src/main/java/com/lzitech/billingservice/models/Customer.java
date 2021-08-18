@@ -1,4 +1,4 @@
-package com.lzitech.billingservice.dao;
+package com.lzitech.billingservice.models;
 
 import lombok.Data;
 

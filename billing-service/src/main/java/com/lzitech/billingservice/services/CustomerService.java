@@ -1,6 +1,6 @@
 package com.lzitech.billingservice.services;
 
-import com.lzitech.billingservice.dao.Customer;
+import com.lzitech.billingservice.models.Customer;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
