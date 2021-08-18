@@ -6,16 +6,15 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.Date;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor @ToString
-public class Bill {
+public class ProductItem {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date billingDate;
-    private Long customerID;
-    @OneToMany(mappedBy = "bill")
-    private Collection<ProductItem> productItems;
+    private Long productID;
+    private Double price;
+    private Integer quantity;
+    @ManyToOne
+    private Bill bill;
 }
