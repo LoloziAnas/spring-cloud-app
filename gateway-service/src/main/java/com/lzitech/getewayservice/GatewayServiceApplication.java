@@ -19,14 +19,20 @@ public class GatewayServiceApplication {
         SpringApplication.run(GatewayServiceApplication.class, args);
     }
 
-/*    @Bean
+   @Bean
     RouteLocator staticRoutes(RouteLocatorBuilder routeLocatorBuilder){
         return routeLocatorBuilder
                 .routes()
-                .route(r->r.path(Constants.CUSTOMERS_PATH).uri(LB_CUSTOMER_SERVICE))
-                .route(r->r.path(Constants.PRODUCTS_PATH).uri(LB_INVENTORY_SERVICE))
+                .route(r->r
+                        .path("/covid/**")
+                        .filters(filterSpec ->
+                                filterSpec.addRequestHeader(Constants.RAPID_API_HOST,"covid-193.p.rapidapi.com")
+                                .addRequestHeader(Constants.RAPID_API_KEY,"e8c7999662msh16fefc22d1dc897p1efdbejsn1e38336786e6")
+                                        .rewritePath("/covid/(?<segment>.*)","/${segment}")
+                                        )
+                        .uri("https://covid-193.p.rapidapi.com"))
                 .build();
-    }*/
+    }
     @Bean
     DiscoveryClientRouteDefinitionLocator dynamicRoutes
             (ReactiveDiscoveryClient rdc, DiscoveryLocatorProperties dlp){
