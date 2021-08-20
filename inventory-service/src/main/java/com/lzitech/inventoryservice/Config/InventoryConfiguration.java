@@ -1,7 +1,7 @@
 package com.lzitech.inventoryservice.Config;
 
 import com.lzitech.inventoryservice.models.Product;
-import com.lzitech.inventoryservice.DAO.ProductRepository;
+import com.lzitech.inventoryservice.repos.ProductRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

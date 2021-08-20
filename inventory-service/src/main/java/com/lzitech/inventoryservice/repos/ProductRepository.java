@@ -1,4 +1,4 @@
-package com.lzitech.inventoryservice.DAO;
+package com.lzitech.inventoryservice.repos;
 
 import com.lzitech.inventoryservice.models.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
